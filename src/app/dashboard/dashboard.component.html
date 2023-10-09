@@ -1,0 +1,67 @@
+<div class="container">
+    <h1>Dashboard Képek szavazásához</h1>
+
+    <img style="height: 70px;" (click)="googleAuth()" *ngIf="!auth.isLoggedIn()"
+     src="https://miro.medium.com/v2/resize:fit:720/format:webp/1*u0bwdudgoyKjSLntsRcqiw.png" />
+
+    <button class="btn btn-sm btn-danger" (click)="logout()" *ngIf="auth.isLoggedIn()">
+        Kilépés
+    </button>
+
+    <br/><br/><br/>
+    <div *ngIf="auth.isLoggedIn()">
+        <div class="mb-3">
+            <label class="form-label">Kép címe</label>
+            <input type="text" class="form-control" [(ngModel)]="aktualis.kepCim">
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Kép Url címe a versenyhez</label>
+            <input type="text" class="form-control" [(ngModel)]="aktualis.kepUrl">
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Neved</label>
+            <input type="text" class="form-control" [disabled]="auth.isLoggedIn()" [(ngModel)]="aktualis.nev">
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Email</label>
+            <input type="email" class="form-control" [disabled]="auth.isLoggedIn()" [(ngModel)]="aktualis.email">
+        </div>
+        <button (click)="report()" class="btn btn-primary">Versenyzés</button>
+    
+        <hr />
+
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">Kép</th>
+                    <th scope="col">Kép címe</th>
+                    <th scope="col">Pályázó Neve</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let x of service.kepek | keyvalue">
+                    <td> <img  [src]="x.value.kepUrl" width="100" height="150" /></td>
+                    <td>
+                        <span>{{x.value.kepCim}}</span> <br/>
+                        <span>{{x.value.szavazok.length}}</span>
+                    </td>
+                    <td>{{x.value.nev}}</td>
+                    
+                    <td>{{x.value.email}}</td>
+                    <td *ngIf="auth.isLoggedIn()">
+                        <button *ngIf="auth.getCurrentUser().email == x.value.email" (click)="service.delete(x.key)" class="btn btn-sm btn-danger">Törlöm!</button>
+                        &nbsp;
+                        <button (click)="service.szavazas(x.key)" class="btn btn-sm btn-success">Szavazok!</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+
+    </div>
+
+
+
+</div>

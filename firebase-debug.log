@@ -1,0 +1,28 @@
+[debug] [2023-10-09T15:38:28.629Z] ----------------------------------------------------------------------
+[debug] [2023-10-09T15:38:28.631Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\levgo\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2023-10-09T15:38:28.631Z] CLI Version:   12.6.2
+[debug] [2023-10-09T15:38:28.632Z] Platform:      win32
+[debug] [2023-10-09T15:38:28.632Z] Node Version:  v18.16.0
+[debug] [2023-10-09T15:38:28.633Z] Time:          Mon Oct 09 2023 17:38:28 GMT+0200 (közép-európai nyári idő)
+[debug] [2023-10-09T15:38:28.633Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-10-09T15:38:28.637Z] >>> [apiv2][query] GET https://firebase-public.firebaseio.com/cli.json [none]
+[debug] [2023-10-09T15:38:28.751Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-10-09T15:38:28.751Z] > authorizing via signed-in user (levgot70@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  C:\Users\levgo\Desktop\wbler\10Hosting\vizsga\blApp\blApp
+
+Before we get started, keep in mind:
+
+  * You are initializing within an existing Firebase project directory
+
+[debug] [2023-10-09T15:38:29.107Z] <<< [apiv2][status] GET https://firebase-public.firebaseio.com/cli.json 200
+[debug] [2023-10-09T15:38:29.107Z] <<< [apiv2][body] GET https://firebase-public.firebaseio.com/cli.json {"cloudBuildErrorAfter":1594252800000,"cloudBuildWarnAfter":1590019200000,"defaultNode10After":1594252800000,"minVersion":"3.0.5","node8DeploysDisabledAfter":1613390400000,"node8RuntimeDisabledAfter":1615809600000,"node8WarnAfter":1600128000000}

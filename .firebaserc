@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "blapp-7668c": {
+      "hosting": {
+        "blApp": [
+          "blapp-7668c"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "blapp-7668c"
+  }
+}
